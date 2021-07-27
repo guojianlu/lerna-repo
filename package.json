@@ -11,18 +11,13 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna clean",
     "build": "lerna run --stream --sort build",
+    "dev": "lerna exec --scope @ragingsnail/core -- yarn dev",
     "commit": "git-cz",
     "prepare": "husky install"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

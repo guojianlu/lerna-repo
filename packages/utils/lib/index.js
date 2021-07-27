@@ -1,18 +1,9 @@
-import moment from 'moment';
+const moment = require('moment');
 
-class Utils {
-  static formatTime(time, format = 'YYYY-MM-DD HH:mm:ss') {
-    return time ? moment(time).format(format) : '—';
-  }
+exports.formatTime = (time, format = 'YYYY-MM-DD HH:mm:ss') => {
+  return time ? moment(time).format(format) : '—';
+};
 
-  static formatDate(time, format = 'YYYY-MM-DD') {
-    return time ? moment(time).format(format) : '—';
-  }
-
-  static getTimeStamp(time) {
-    return time ? moment(time).valueOf() : moment().valueOf();
-  }
-
-}
-
-export default Utils;
+exports.isObject = obj => {
+  return obj && typeof obj === 'object' && obj !== null;
+};

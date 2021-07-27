@@ -1,20 +1,9 @@
-import Utils from '@ragingsnail/utils';
+const { formatTime } = require('@ragingsnail/utils');
 function sum(a, b) {
   return a + b;
 }
 
-function foo() {
-  console.log('this is foo func');
-}
-
-function bar() {
-  console.log('this is bar func');
-}
-
-function baz({a,b}) {
-      console.log('baz func call: ', a,b);
-}
-
 console.log('sum: ', sum(1, 2));
-console.log('baz: ', baz({1,2}));
-console.log('当前时间是： ', Utils.formatTime(new Date()));
+console.log('当前时间是： ', formatTime(new Date()));
+
+module.exports = { sum };

@@ -1,7 +1,5 @@
 'use strict';
-
-const utils = require('..');
-
-describe('@ragingsnail/utils', () => {
-    it('needs tests');
+test('@ragingsnail/utils', () => {
+    const { isObject } = require('../src/index.js');
+    expect(isObject('str')).toBe(false)
 });
