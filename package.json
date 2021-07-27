@@ -1,0 +1,29 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "clean": "lerna clean",
+    "build": "lerna run --stream --sort build",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "commitizen": "^4.2.4",
+    "cz-lerna-changelog": "^2.0.3",
+    "lerna": "^3.21.0"
+  }
+}
