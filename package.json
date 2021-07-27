@@ -19,9 +19,9 @@
       "path": "./node_modules/cz-lerna-changelog"
     }
   },
-  "husky": { 
+  "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS" 
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
   "devDependencies": {
@@ -30,10 +30,19 @@
     "@babel/preset-env": "^7.14.8",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "babel-eslint": "^10.1.0",
     "commitizen": "^4.2.4",
     "cz-lerna-changelog": "^2.0.3",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.1",
     "lerna": "^3.21.0",
+    "lint-staged": "^11.1.1",
     "prettier": "^2.3.2"
   }
 }
