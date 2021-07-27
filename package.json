@@ -11,15 +11,16 @@
     "bootstrap": "lerna bootstrap --use-workspaces",
     "clean": "lerna clean",
     "build": "lerna run --stream --sort build",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "prepare": "husky install"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-lerna-changelog"
     }
   },
-  "husky": {
-    "hooks": { 
+  "husky": { 
+    "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS" 
     }
   },
