@@ -10,5 +10,11 @@ function foo() {
 function bar() {
   console.log('this is bar func');
 }
+
+function baz({a,b}) {
+      console.log('baz func call: ', a,b);
+}
+
 console.log('sum: ', sum(1, 2));
+console.log('baz: ', baz({1,2}));
 console.log('当前时间是： ', Utils.formatTime(new Date()));
